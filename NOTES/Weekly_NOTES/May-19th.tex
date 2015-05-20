@@ -20,14 +20,59 @@ This document is used for recording my learning for this article.
 
 
 \subsection{Supervised learning}
+For supervised learning, in the above section, we can know that there are two situations for that, that is:
+
+1) Regression.
+
+2) Classification.
 
 
+\subsubsection{Regression}
+In this category, let's assume that $Y$ is the real-valued scalar or vector, then the output of function $f$(here we should recall that $f$ is the decision function) should also be in the same set of $Y$, which means its value should be in the set $Y$.
 
-\subsection{}
+Then loss function should be :
 
+$$L(f, (X,Y)) = ||f(X) - Y||$$
 
-\subsection{}
+\subsubsection{Classification}
+Classification is different, as the output $Y$ is finite integer(or symbol) corresponding to the index, and the \textbf{loss function} should be the \textbf{negative} \emph{log-likelihood} value,
 
+$$f_i(X) = P(Y = i | X)$$ 
+
+And the loss function should be:
+
+$$L(f, (X,Y)) = -\log{f_Y(X)}$$
+
+\textbf{NOTE}: the decision function $f$ must have the constrain that:
+
+$$\sum_i{f_i(X)} = 1, f_i(X) \geq 0$$
+
+\subsubsection{Summary}
+From the above two kinds of \textbf{supervised learning}, I know that for regression since we can get continual value, so the loss function is to calculate the \textbf{absolute distance} between the decision function and real value.
+
+But for classification problem, since it's the classify label or index, we cannot function, so here we use the likelihood, and to use the \emph{sigmoid} function like the $\log{X}$ function. And all the samples forms the whole training set, so the constrain is also given as above. 
+
+\subsection{Unsupervised learning}
+In unsupervised learning, the learning function $f$ is used to characterize the unknown distribution function $P(Z)$, this function $f$ is may have the following categories:
+
+1) some is just the direct represent of the $P(Z)$, which is called density estimation.
+
+2) some is to characterize where the density concentrates.
+
+Clustering: clustering algorithm is used to divide the space into regions, that have two types:
+
+1) hard partition. (k-means)
+
+2) soft partition. (Gaussian mixed model)
+
+3) form a new representation for $Z$. (Principle Component Analysis)
+
+\subsection{Local generalization}
+Defintion: when $x_i$ is close to $x_j$, then the $f(x_i)$ should also be close to $f(x_j)$.
+
+1) When the target unknown function is more than the input parameters $X$, then it's hard to generalize since there are so many variables, \textbf{curse of dimension}.
+
+2) for example, there are $n$ variables with 10 different value, then it has $10^{n}$ configurations.
 
 
 \end{document}
