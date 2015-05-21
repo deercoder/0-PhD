@@ -1,0 +1,44 @@
+\documentclass{article}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\title{Introduction to Deep Learning Algorithms \-- Notes}
+\author{Chang Liu}
+
+
+\begin{document}
+\maketitle
+
+\section{Depth}
+Depth: the longest path from the input to the output.
+flow graph: the graph that contains all the necessary computations.
+
+
+\section{Motivation for deep architecture}
+The motivation is that:
+
+1) Insufficient depth can hurt. As in $d$-depth, the complexity could be $O(n)$, but in the $(d-1)$-depth, the complexity could be $O(2^n)$. When reducing the depth of the architecture, the complexity should be in exponent.
+
+2) human brain has a deep architecture. Human concept processing has hierarchy, from simple to complex, and has many neurons that process the computing. And the only $\%1$ neurons is active simultaneously when processing.
+
+3) Cognitive process seem deep. Human organize the knowledge hierarchically. 
+
+\section{Breakthrough in deep learning}
+
+Before 2006, the deep learning doesn't have a good performance, training a deep supervised feedforward neural network tends to yield worse results, after that, Hilton and others have published some papers about DBNs, that introduce the pre-training and fine-tuning of the unsupervised learning will yield a good performance.
+
+See the reference for more papers about these breakthroughs.
+
+
+\section{Reference}
+
+\indent 1)\href{http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/239}{Yoshua Bengio, Learning Deep Architectures for AI, Foundations and Trends in Machine Learning, 2(1), 2009}
+
+2)\href{http://www.cs.toronto.edu/~hinton/absps/fastnc.pdf}{A fast learning algorithm for deep belief nets}
+
+3)\href{http://www.iro.umontreal.ca/~lisa/publications2/index.php/publications/show/190}{Greedy Layer-Wise Training of Deep Networks}
+
+4)\href{http://yann.lecun.com/exdb/publis/pdf/ranzato-06.pdf}{Efficient Learning of Sparse Representations with an Energy-Based Model}
+
+\end{document}
+
+
