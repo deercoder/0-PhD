@@ -12,13 +12,13 @@ having to install or copy a large dataset onto their computers.
 
    B. C. Russell, A. Torralba, K. P. Murphy, W. T. Freeman.
    LabelMe: a Database and Web-based Tool for Image Annotation.
-   International Journal of Computer Vision, 77(1-3):157-173, 2008. 
+   International Journal of Computer Vision, 77(1-3):157-173, 2008.
    [Project page](http://labelme.csail.mit.edu)
 
 
 ### DOWNLOAD:
 
-You can download a [zip file of the source code](https://github.com/CSAILVision/LabelMeAnnotationTool/archive/master.zip) directly.  
+You can download a [zip file of the source code](https://github.com/CSAILVision/LabelMeAnnotationTool/archive/master.zip) directly.
 
 Alternatively, you can clone it from GitHub as follows:
 
@@ -60,7 +60,7 @@ $ git clone https://github.com/CSAILVision/LabelMeAnnotationTool.git
    folders/filenames have alphanumeric characters (i.e. no spaces or
    funny characters).
 
-4. Point your web browser to the following URL: 
+4. Point your web browser to the following URL:
 
    http://www.yourserver.edu/path/to/LabelMe/tool.html?collection=LabelMe&mode=f&folder=example_folder&image=img1.jpg
 
@@ -203,6 +203,6 @@ definitions.
 (e.g. for Mechanical Turk instructions, etc.).
 
 
----- 
+----
 
 (c) 2015, MIT Computer Science and Artificial Intelligence Laboratory

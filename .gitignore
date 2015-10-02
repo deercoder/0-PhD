@@ -8,3 +8,7 @@ annotationTools/scribble/image.jpg
 annotationTools/scribble/mask.png
 annotationTools/scribble/scribble.png
 *.txt
+.DS_Store
+*.log
+*.aux
+*.synctex.gz
