@@ -36,12 +36,20 @@ sess = tf.Session()
 sess.run(init)
 
 
-for _ in range(10000):
+for _ in range(1000):
 	batch_xs, batch_ys = mnist.train.next_batch(100)
 	sess.run(train_step, feed_dict={x: batch_xs, y_: batch_ys})
 	print(sess.run(cross_entropy, feed_dict={x: batch_xs, y_: batch_ys}))
 
+print("W:",  sess.run(w))
+print("b:", sess.run(b))
+
+# array of true/false, that stores whether it predicts correct(=true) or not(false)
 correct_prediction = tf.equal(tf.argmax(y,1), tf.argmax(y_, 1))
+
+# first case into 0/1, then calculate the accuracy
 accuracy = tf.reduce_mean(tf.cast(correct_prediction, tf.float32))
 
 print(sess.run(accuracy, feed_dict={x: mnist.test.images, y_: mnist.test.labels}))
+
+sess.close()
